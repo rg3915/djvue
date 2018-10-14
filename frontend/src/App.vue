@@ -2,21 +2,23 @@
   <div id="app">
     <Navbar/>
     <img src="./assets/logo.png">
-    <router-view></router-view>
-    <Users/>
+    <router-view/>
   </div>
 </template>
 
 <script>
 
+import Hello from './components/Hello.vue'
 import Navbar from './components/Navbar.vue'
-import Users from './components/Users'
 
 export default {
   name: 'app',
   components: {
-    Navbar,
-    Users
+    Hello,
+    Navbar
+  },
+  created () {
+    this.$store.dispatch('getUsers')
   }
 }
 </script>

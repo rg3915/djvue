@@ -9,7 +9,7 @@
 
       <b-navbar-nav>
         <b-nav-item href="#">Home</b-nav-item>
-        <b-nav-item href="#">Users</b-nav-item>
+        <b-nav-item :to="{'name': 'users'}">Users</b-nav-item>
       </b-navbar-nav>
 
       <!-- Right aligned nav items -->
